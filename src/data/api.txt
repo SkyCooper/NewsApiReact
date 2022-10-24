@@ -1,0 +1,2 @@
+const API_KEY = "2ae73e0e340345b39a263c6557eb8796";
+const url =    "https://newsapi.org/v2/top-headlines?country=us&apiKey=";
