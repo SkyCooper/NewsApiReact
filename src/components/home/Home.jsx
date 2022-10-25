@@ -1,11 +1,12 @@
 // import axios from "axios";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import { v1 as uuid } from "uuid";
 
 import "./home.module.css";
 
 const Home = () => {
+  const navigate = useNavigate();
   const [news, setNews] = useState([]);
 
   const getNews = async () => {
@@ -34,16 +35,21 @@ const Home = () => {
   return (
     <div>
       <h1>News Links</h1>
-      <ul>
-        {news.map((item, index) => {
-          const { title, description, urlToImage, url } = item;
+      <div className="buttons">
+        {news.map((item) => {
+          const { title } = item;
           return (
-            <Link to={"/newslist"} key={uuid()} >
-              <li>{title}</li>
-            </Link>
+            <button
+              onClick={() => navigate(`/${title}`, { state: item })}
+              key={uuid()}
+            >
+              {title}
+            </button>
           );
         })}
-      </ul>
+      </div>
+
+      <Outlet />
     </div>
   );
 };

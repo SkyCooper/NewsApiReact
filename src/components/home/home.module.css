@@ -1,3 +1,9 @@
-li{
-padding: 1rem;
+.buttons{
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+}
+
+button{
+  display: inline;
 }

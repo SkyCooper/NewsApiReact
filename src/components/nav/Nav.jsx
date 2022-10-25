@@ -3,7 +3,7 @@ import "./nav.module.css";
 
 const Nav = () => {
   return (
-    <div className="navbar">
+    <div className="navbar justify-content-between bg-light p-4">
       <Link to="/">Home </Link>
       <Link to="/newslist"> News List </Link>
       <Link to="/newsdetail"> News Detail </Link>

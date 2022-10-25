@@ -3,20 +3,20 @@ import Footer from "./components/footer/Footer";
 import Home from "./components/home/Home";
 import Nav from "./components/nav/Nav";
 import NewsDetails from "./components/newsdetails/NewsDetails";
-
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
-  return(
+  return (
     <>
-    <Nav/>
-    <Routes>
-      <Route path="/" element={<Home/>}/>
-      <Route path="/news:" element={<NewsDetails/>}/>
-
-    </Routes>
-    <Footer/>
+      <Nav />
+      <Routes>
+        <Route path="/" element={<Home />}>
+          <Route path="/:title" element={<NewsDetails />} />
+        </Route>
+      </Routes>
+      <Footer />
     </>
   );
-}
+};
 
-export default App
+export default App;
