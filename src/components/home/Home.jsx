@@ -1,57 +1,16 @@
-// import axios from "axios";
-import { useEffect, useState } from "react";
-import { Outlet, useNavigate } from "react-router-dom";
-import { v1 as uuid } from "uuid";
-
-import ButtonStyle from "./home.module.css";
+import HomeStyle from "./home.module.css"
+import nytimes from "../../data/nytimes.jpg"
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-  const navigate = useNavigate();
-  const [news, setNews] = useState([]);
-
-  const getNews = async () => {
-    const apiKey = "L6k85Ai0gDrPx60p8q6aAyEBBNkqjD8D";
-    const apiAdress =
-      "https://api.nytimes.com/svc/topstories/v2/world.json?api-key=";
-    const url = `${apiAdress}${apiKey}`;
-
-    try {
-      const res = await fetch(url);
-      console.log(res);
-      const data = await res.json();
-      console.log(data);
-      const { results } = data;
-      setNews(results);
-      console.log(news);
-    } catch (error) {
-      console.log("Api don't work");
-    }
-  };
-
-  useEffect(() => {
-    getNews();
-  }, []);
-
+  const navigate = useNavigate()
   return (
-    <div>
-      <h1>News Links</h1>
-      <div className={ButtonStyle.buttons}>
-        {news.map((item) => {
-          const { title } = item;
-          return (
-            <button
-              onClick={() => navigate(`/${title}`, { state: item })}
-              key={uuid()}
-            >
-              {title}
-            </button>
-          );
-        })}
-      </div>
-
-      <Outlet />
+    <div className={HomeStyle.container}>
+      <h1>Welcome NYT</h1>
+      <img src={nytimes} alt="nyt" className={HomeStyle.nyt} />
+      <button onClick={()=> navigate("newslist")}>Click For News List</button>
     </div>
   );
-};
+}
 
-export default Home;
+export default Home
