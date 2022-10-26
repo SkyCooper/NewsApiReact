@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import { v1 as uuid } from "uuid";
 
-import "./home.module.css";
+import ButtonStyle from "./home.module.css";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -35,7 +35,7 @@ const Home = () => {
   return (
     <div>
       <h1>News Links</h1>
-      <div className="buttons">
+      <div className={ButtonStyle.buttons}>
         {news.map((item) => {
           const { title } = item;
           return (

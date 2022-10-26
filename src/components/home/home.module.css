@@ -1,9 +1,31 @@
-.buttons{
+.buttons {
   display: flex;
   align-items: center;
-  justify-content:space-around;
+  justify-content: center;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
 }
 
-button{
-  display: inline;
+button {
+  display: inline-block;
+  border: none;
+  background-color: rgb(134, 163, 187);
+  padding: 5px;
+  width: 12rem;
+  height: 4rem;
+  margin: 4px;
+  border-radius: 15px;
+  align-items: center;
+  box-shadow: 3px 3px 2px 2px rgba(159, 18, 18, 0.712);
+}
+
+button:active{
+  transform: scale(0.95);
+}
+
+
+h1{
+  text-align: center;
+  font-size: 2rem;
+  color: brown;
 }

@@ -3,7 +3,6 @@ import Footer from "./components/footer/Footer";
 import Home from "./components/home/Home";
 import Nav from "./components/nav/Nav";
 import NewsDetails from "./components/newsdetails/NewsDetails";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
   return (
