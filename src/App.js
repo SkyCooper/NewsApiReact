@@ -4,6 +4,7 @@ import Home from "./components/home/Home";
 import Nav from "./components/nav/Nav";
 import NewsDetails from "./components/newsdetails/NewsDetails";
 import NewsList from "./components/newsList/NewsList";
+import "./App.css"
 
 const App = () => {
   return (
