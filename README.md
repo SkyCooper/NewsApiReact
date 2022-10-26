@@ -4,7 +4,7 @@
 
 ## Visualization of the Website
 
-![Form](./gallery.gif)
+![Form](./news.gif)
 
 ## Description
 
