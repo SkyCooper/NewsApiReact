@@ -20,9 +20,6 @@ const NewsDetails = () => {
   console.log(multimedia[0].url);
   return (
     <div className={DetailStyle.container}>
-      {/* <div className="col-md-6 col-lg-4 col-xl-3">
-        <div className="card">
-          <div className="card-body"> */}
       <h5>{title}</h5>
       <div>
         <p className={DetailStyle.textp}>
@@ -54,9 +51,6 @@ const NewsDetails = () => {
         <span>Date : </span>
         <span className>{created_date.substring(0, 10)}</span>
       </p>
-      {/* </div>
-        </div>
-      </div> */}
     </div>
   );
 };

@@ -3,10 +3,20 @@
   justify-content: space-between;
   padding: 1rem 4rem;
   background-color: brown;
+  position: sticky;
+  top: 0;
 }
 
 a {
   text-decoration: none;
   font-size: 1.4rem;
   color: white;
+}
+
+@media only screen and (max-width: 550px) {
+  .navbar {
+    background-color: lightblue;
+    flex-direction: column;
+    align-items: center;
+  }
 }

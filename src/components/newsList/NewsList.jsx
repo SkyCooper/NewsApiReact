@@ -36,26 +36,17 @@ const NewsList = () => {
     <div>
       <h1>Headlines..</h1>
       <div className={ListStyle.buttons}>
-        {news.map((item) => {
-          const { title } = item;
-          return (
-            <button
-              onClick={() => navigate(`${title}`, { state: item })}
-              key={uuid()}
-            >
-              {title}
-            </button>
-            // <Link
-            //   key={uuid()}
-            //   to={{
-            //     pathname: `${title}`,
-            //     state: { item },
-            //   }}
-            // >
-            //   {title}
-            // </Link>
-          );
-        })}
+          {news.map((item) => {
+            const { title } = item;
+            return (
+              <button
+                onClick={() => navigate(`${title}`, { state: item })}
+                key={uuid()}
+              >
+                {title}
+              </button>
+            );
+          })}
       </div>
 
       <Outlet />
